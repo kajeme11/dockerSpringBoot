@@ -1,11 +1,19 @@
 FROM openjdk:8
 EXPOSE 8080
-ADD target/spring-boot-docker.jar spring-boot-docker.jar
-ENTRYPOINT ["java", "-jar", "/spring-boot-docker.jar"]
+#docker such as the name of the project
+ADD target/docker.jar docker.jar
+ENTRYPOINT ["java", "-jar", "/docker.jar"]
+
+
+#CREATE DOCKER IMAGE
+# mvn spring-boot:build-image
+
+#RUN MVN INSTALL
+#run mvn install, after we should see the docker.jar file under target
 
 #CREATE DOCKER IMAGE
 #on terminal execute following docker command, t = target
-#docker build -t spring-boot-docker.jar .
+#docker build -t docker.jar .
 
 #VIEW DOCKER IMAGE
 #docker image ls
