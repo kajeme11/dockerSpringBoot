@@ -8,6 +8,9 @@ ENTRYPOINT ["java", "-jar", "/docker.jar"]
 #CREATE DOCKER IMAGE
 # mvn spring-boot:build-image
 
+#DOCKER LOGIN
+#docker login
+
 #RUN MVN INSTALL
 #run mvn install, after we should see the docker.jar file under target
 
